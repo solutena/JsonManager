@@ -43,6 +43,7 @@ JsonManager는 Newtonsoft.Json을 사용하여 객체를 JSON으로 직렬화하
 JSON 파일을 읽어 객체로 변환합니다.
 
 ```var data = JsonManager.ImportJson<SaveData>(directory, "SaveData");```
+
 파일 이름을 직접 지정할 수도 있습니다.
 
 파일이 없거나 불러오기에 실패하면 default 값을 반환합니다.
