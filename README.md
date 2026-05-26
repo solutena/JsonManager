@@ -12,9 +12,11 @@ JsonManager는 Newtonsoft.Json을 사용하여 객체를 JSON으로 직렬화하
 
 1. URL 복사
 
+
 ![image](https://github.com/user-attachments/assets/f4060f1d-94aa-4a49-b001-e7a5e01316e1)
 
 2. 패키지 매니저에서 Add Package from Git URL 선택
+
 
 <img width="798" height="48" alt="image" src="https://github.com/user-attachments/assets/342a43dd-996d-4e3c-992f-68e7e7951a5e" />
 
@@ -36,11 +38,11 @@ JsonManager.ExportJson(data, directory, "SaveData");
 
 JSON 파일을 읽어 객체로 변환합니다.
 
-var data = JsonManager.ImportJson<SaveData>(directory);
+```var data = JsonManager.ImportJson<SaveData>(directory);```
 
 파일 이름을 직접 지정할 수도 있습니다.
 
-var data = JsonManager.ImportJson<SaveData>(directory, "SaveData");
+```var data = JsonManager.ImportJson<SaveData>(directory, "SaveData");```
 
 파일이 없거나 불러오기에 실패하면 default 값을 반환합니다.
 
