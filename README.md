@@ -8,15 +8,14 @@ Unity에서 JSON 파일을 간단하게 저장하고 불러오기 위한 유틸�
 
 # 설치
 
-<img width="400" height="324" alt="image" src="https://github.com/user-attachments/assets/f816e500-6fe6-4fce-88ed-64602f401f59" />
-
+<img width="399" height="299" alt="image" src="https://github.com/user-attachments/assets/5483dc30-2703-4bf5-a9a7-dff86c2398f6" />
 1. URL 복사
 
 ![image](https://github.com/user-attachments/assets/f4060f1d-94aa-4a49-b001-e7a5e01316e1)
 
 2. 패키지 매니저에서 Add Package from Git URL 선택
 
-<img width="799" height="47" alt="image" src="https://github.com/user-attachments/assets/36e3ae20-f8f4-4529-9e15-362b228be2f5" />
+<img width="798" height="48" alt="image" src="https://github.com/user-attachments/assets/342a43dd-996d-4e3c-992f-68e7e7951a5e" />
 
 3.  복사한 URL로 설치
 
