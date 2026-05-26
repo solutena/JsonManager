@@ -2,13 +2,14 @@
 
 Unity에서 JSON 파일을 간단하게 저장하고 불러오기 위한 유틸리티입니다.
 
-`JsonManager`는 Newtonsoft.Json을 사용하여 객체를 JSON으로 직렬화하고, 다시 객체로 역직렬화합니다.  
+JsonManager는 Newtonsoft.Json을 사용하여 객체를 JSON으로 직렬화하고, 다시 객체로 역직렬화합니다.  
 저장 경로의 폴더가 없으면 자동으로 생성되며, 파일 이름을 지정하지 않으면 타입의 `FullName`을 기본 파일명으로 사용합니다.
 
 
 # 설치
 
 <img width="399" height="299" alt="image" src="https://github.com/user-attachments/assets/5483dc30-2703-4bf5-a9a7-dff86c2398f6" />
+
 1. URL 복사
 
 ![image](https://github.com/user-attachments/assets/f4060f1d-94aa-4a49-b001-e7a5e01316e1)
