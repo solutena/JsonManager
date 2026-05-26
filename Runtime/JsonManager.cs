@@ -6,8 +6,8 @@ using Newtonsoft.Json;
 
 public class JsonManager
 {
-	public static void ExportJson<T>(T data, string directory) => ExportJson(data, directory, typeof(T).FullName);
-	public static void ExportJson<T>(T data, string directory, string fileName)
+	public static void Export<T>(T data, string directory) => Export(data, directory, typeof(T).FullName);
+	public static void Export<T>(T data, string directory, string fileName)
 	{
 		string path = Path.Combine(directory, $"{fileName}.json");
 		try
@@ -23,8 +23,8 @@ public class JsonManager
 		}
 	}
 
-	public static T ImportJson<T>(string directory) => ImportJson<T>(directory, typeof(T).FullName);
-	public static T ImportJson<T>(string directory, string fileName)
+	public static T Import<T>(string directory) => Import<T>(directory, typeof(T).FullName);
+	public static T Import<T>(string directory, string fileName)
 	{
 		string path = Path.Combine(directory, $"{fileName}.json");
 		try
