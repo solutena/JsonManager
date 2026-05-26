@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -19,7 +19,7 @@ public class JsonManager
 		}
 		catch (Exception ex)
 		{
-			Debug.LogError($"Failed to export JSON for {fileName}: {ex.Message}");
+			Debug.LogError($"Failed to export JSON for {fileName}: {ex}");
 		}
 	}
 
@@ -39,7 +39,7 @@ public class JsonManager
         }
         catch (Exception ex)
 		{
-			Debug.LogError($"Failed to import JSON for {fileName}: {ex.Message}");
+			Debug.LogError($"Failed to import JSON for {fileName}: {ex}");
 			return default;
         }
     }
