@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 
 public class JsonManager
 {
-	public static void Export<T>(T data, string directory) => Export(data, directory, typeof(T).FullName);
-	public static void Export<T>(T data, string directory, string fileName)
+	public static void Export<T>(T data, string directory, JsonSerializerSettings settings = null) => Export(data, directory, typeof(T).FullName, settings);
+	public static void Export<T>(T data, string directory, string fileName, JsonSerializerSettings settings = null)
 	{
 		string path = Path.Combine(directory, $"{fileName}.json");
 		try
 		{
 			Directory.CreateDirectory(directory);
-			string json = JsonConvert.SerializeObject(data, Formatting.Indented);
+			string json = JsonConvert.SerializeObject(data, settings);
 			File.WriteAllText(path, json, Encoding.UTF8);
 			Debug.Log($"Exported JSON for {fileName} to: {path}");
 		}
@@ -23,8 +23,8 @@ public class JsonManager
 		}
 	}
 
-	public static T Import<T>(string directory) => Import<T>(directory, typeof(T).FullName);
-	public static T Import<T>(string directory, string fileName)
+	public static T Import<T>(string directory, JsonSerializerSettings settings = null) => Import<T>(directory, typeof(T).FullName, settings);
+	public static T Import<T>(string directory, string fileName, JsonSerializerSettings settings = null)
 	{
 		string path = Path.Combine(directory, $"{fileName}.json");
 		try
@@ -32,7 +32,7 @@ public class JsonManager
 			if (File.Exists(path))
 			{
 				string json = File.ReadAllText(path, Encoding.UTF8);
-				return JsonConvert.DeserializeObject<T>(json);
+				return JsonConvert.DeserializeObject<T>(json, settings);
 			}
 			Debug.LogWarning($"JSON file not found for {fileName}: {path}");
 			return default;
